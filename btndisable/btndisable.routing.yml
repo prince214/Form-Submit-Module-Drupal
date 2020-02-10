@@ -1,0 +1,7 @@
+btndisable.requestor_controller_matchrequestor:
+  path: '/call/ajaxdata'
+  methods:  [POST]
+  defaults:
+    _controller: '\Drupal\btndisable\Controller\RequestorController::matchrequestor'
+  requirements:
+    _permission: 'access content'

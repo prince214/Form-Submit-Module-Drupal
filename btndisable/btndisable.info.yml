@@ -1,0 +1,6 @@
+name: 'Btn Disable'
+type: module
+description: 'Disable webform to submit once have submitted'
+package: 'Custom'
+core: 8.x
+project: 'btndisable'

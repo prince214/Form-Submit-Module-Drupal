@@ -1,0 +1,19 @@
+<?php
+
+/**
+ * Implements hook_page_attachments_alter().
+ */
+function btndisable_page_attachments_alter(array &$page) {
+  $current_user = \Drupal::currentUser();
+  $nodetype = '';
+  $node = \Drupal::routeMatch()->getParameter('node');
+if ($node instanceof \Drupal\node\NodeInterface) {
+  $nodetype = $node->bundle();
+}
+if(!empty($nodetype) && $nodetype == 'course'){
+if (in_array("lms_user_manager",$current_user->getRoles()) || in_array("lms_user_student",$current_user->getRoles())) {
+   $page['#attached']['library'][] = 'btndisable/btndisable';
+ }
+}
+ 
+}

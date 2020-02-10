@@ -1,0 +1,7 @@
+btndisable:
+  version: VERSION
+  js:
+    js/pageloadajax.js: {}
+  dependencies:
+    - core/jquery
+
